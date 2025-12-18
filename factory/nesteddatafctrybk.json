@@ -1,0 +1,9 @@
+{
+	"name": "nesteddatafctrybk",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "45f543e4-1743-4421-ba48-83cecae9d1f9",
+		"tenantId": "02db4df2-57aa-47b7-b588-ac1169b71a48"
+	}
+}
