@@ -1,0 +1,48 @@
+{
+	"name": "DS_metadata_child",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dsfoldername": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().dsfoldername",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "dtype",
+				"type": "String"
+			},
+			{
+				"name": "input",
+				"type": "String"
+			},
+			{
+				"name": "output",
+				"type": "String"
+			},
+			{
+				"name": "ulperrortol",
+				"type": "String"
+			}
+		]
+	}
+}
